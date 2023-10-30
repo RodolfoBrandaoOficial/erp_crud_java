@@ -1,4 +1,3 @@
-
 package erp_crud_java;
 
 import java.util.List;
@@ -23,7 +22,7 @@ public class TarefaView {
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             escolha = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (escolha) {
                 case 1:
@@ -35,9 +34,9 @@ public class TarefaView {
                     listarTarefas();
                     break;
                 case 3:
-                    System.out.print("Digite o índice da tarefa a ser removida: ");
-                    int indice = scanner.nextInt();
-                    controlador.removerTarefa(indice);
+                    System.out.print("Digite o ID da tarefa a ser removida: ");
+                    int id = scanner.nextInt();
+                    controlador.removerTarefa(id);
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -52,7 +51,7 @@ public class TarefaView {
         List<String> tarefas = controlador.obterTarefas();
         System.out.println("Tarefas:");
         for (int i = 0; i < tarefas.size(); i++) {
-            System.out.println(i + ". " + tarefas.get(i));
+            System.out.println(i + 1 + ". " + tarefas.get(i));
         }
     }
 }
