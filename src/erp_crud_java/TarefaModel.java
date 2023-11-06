@@ -33,7 +33,8 @@ public class TarefaModel {
         try {
             String sql = "CREATE TABLE IF NOT EXISTS tarefas (" +
                     "id serial PRIMARY KEY," +
-                    "descricao VARCHAR (255) NOT NULL)";
+                    "descricao VARCHAR (255) NOT NULL)," +
+                    "preco VARCHAR (255) NOT NULL)";
             connection.createStatement().executeUpdate(sql);
         } catch (SQLException e) {
             e.printStackTrace();
